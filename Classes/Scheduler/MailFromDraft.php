@@ -96,6 +96,7 @@ class MailFromDraft extends AbstractTask
             // For example the current date could get appended to the subject.
             $hookParams['draftRecord'] = &$draftRecord;
             $hookParams['defaultParams'] = &$defaultParams;
+            $hookParams['dmailUid'] = $this->dmailUid;
             $this->callHooks('postInsertClone', $hookParams);
 
             // fetch the cloned record
